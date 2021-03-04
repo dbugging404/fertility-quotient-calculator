@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fertility Quotient Calculator</title>
+</head>
+<body>
+    <div class="columns has-text-centered is-mobile">
+        <div class="column is-half is-offset-one-quarter is-inline-block">
+
+            <section class="hero is-danger has-text-centered">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title is-3">Fertility Quotient Calculator</h1>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <div class="container">
+                <div class="age">
+                    <label for="age" class="age"> <strong> Please enter your age : </strong></label>
+                    <input class="input has-text-centered" type="text" id="ageInput" name="age"  onkeypress='return isNumberKey(event)'>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="bmi">
+                    <label for="bmi" class="bmi"><strong> Please enter your Body Mass Index (BMI) value : </strong></label>
+                    <input class="input has-text-centered" type="text" id="bmiInput" name="bmi"  onkeypress='return isNumberKey(event)'>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="afc">
+                    <label for="afc" class="afc"><strong> Please enter your Antral Follicle Count (AFC) value : </strong></label>
+                    <input class="input has-text-centered" type="text" id="afcInput" name="afc"  onkeypress='return isNumberKey(event)'>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="amh">
+                    <label for="amh" class="amh"><strong> Please Enter your Anti-Müllerian Hormone (AMH) level : </strong></label>
+                    <input class="input has-text-centered" type="text" id="amhInput" name="amh"  onkeypress='return isNumberKey(event)'>
+                </div>
+            </div>
+            <br>
+            <div>
+                <button class="button is-danger is-rounded" type="submit" onclick="computeQuotient()">Calculate</button>
+            </div>
+        
+
+            <br>
+
+            <section>
+                <div class="container has-text-centered is-mobile">
+                    <div>
+                        <div class="columns">
+
+                            <div class="column is-one-third">
+                                <p class="content is-medium"> Final Score: </p>
+                                <div class="box">
+                                    <span class="content is-medium is-inline" id="score"> </span>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third">
+                                <p class="content is-medium"> Percentage: </p>
+                                <div class="box">
+                                    <span id="percentage"> </span>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third">
+                                <p class="content is-medium"> Result: </p>
+                                <div class="box">
+                                    <span id="result"> </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+        
+ <script src="./script.js"></script>
+</body>
+</html>
